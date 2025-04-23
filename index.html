@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immuv - Sua Marca em Movimento</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f0f0f0, #ffffff);
+      color: #111;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    header nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #00e3f3;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 80px;
+      background: linear-gradient(135deg, #00e3f3, #9f00ff);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .card i {
+      font-size: 2.5rem;
+      color: #9f00ff;
+      margin-bottom: 10px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: #00e3f3;
+      color: #000;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #9f00ff;
+      color: white;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="LOGO IMMUV aprovada 1.png" alt="Logo Immuv">
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#dicas">Dicas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Impulsione sua marca com a Immuv</h1>
+    <p>Transformamos seu negócio em uma potência digital com soluções de marketing modernas e personalizadas.</p>
+  </section>
+
+  <section id="sobre">
+    <h2 class="section-title">Sobre a Immuv</h2>
+    <p>Somos uma agência de marketing digital localizada no Vale do Paraíba. Nosso foco é ajudar pequenas e médias empresas a crescerem no digital com estratégias personalizadas, atendimento próximo e resultados reais.</p>
+  </section>
+
+  <section id="servicos">
+    <h2 class="section-title">Nossos Serviços</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Gestão de Redes Sociais</h3>
+        <p>Criação de conteúdo, planejamento estratégico e análise de performance para suas redes sociais.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-globe"></i>
+        <h3>Criação de Sites</h3>
+        <p>Sites modernos, rápidos e responsivos para destacar sua empresa no digital.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-bolt"></i>
+        <h3>Tráfego Pago</h3>
+        <p>Anúncios eficazes para gerar leads e vendas com retorno sobre investimento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultados">
+    <h2 class="section-title">Resultados que Geramos</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>+70% de Engajamento</h3>
+        <p>Clientes com aumento significativo de interação nas redes sociais.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-user-plus"></i>
+        <h3>+3000 Seguidores</h3>
+        <p>Crescimento de base de seguidores com estratégias orgânicas e pagas.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-store"></i>
+        <h3>Mais Visibilidade</h3>
+        <p>Negócios locais se destacando na internet e aumentando vendas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dicas">
+    <h2 class="section-title">Dicas de Marketing</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Reels de Impacto</h3>
+        <p>Use vídeos curtos para atrair e reter a atenção do seu público.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-search"></i>
+        <h3>SEO Local</h3>
+        <p>Otimização para buscas no Google é essencial para negócios físicos.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>Planejamento de Conteúdo</h3>
+        <p>Tenha um calendário editorial para manter constância e relevância.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2 class="section-title">Fale com a gente</h2>
+    <p style="text-align:center">Pronto para transformar sua presença online? Fale com a Immuv agora mesmo.</p>
+    <div style="text-align:center">
+      <a class="cta-button" href="https://wa.me/5511999999999" target="_blank">Fale no WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Immuv - Todos os direitos reservados</p>
+    <p>Sua marca em movimento</p>
+  </footer>
+
+  <a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+
+</html>
