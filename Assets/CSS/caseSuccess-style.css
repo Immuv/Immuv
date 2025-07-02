@@ -1,7 +1,6 @@
 .testimonials {
     padding: 5rem 1rem;
     background-color: #1f2937; /* Fundo escuro */
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
     text-align: center;
 }

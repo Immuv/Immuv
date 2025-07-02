@@ -44,10 +44,11 @@ header a:hover {
 
 /* Estilo da seção Hero */
 .hero-bg {
-    background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
+    /* background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1920&q=80'); */
+    background-image: url('Hero_bg.webp');
+    background-size:cover;
     background-position: center;
-    background-color: rgba(0, 20, 40, 0.99);
+    background-color: rgba(0, 20, 40, 0.75);
     background-blend-mode: overlay;
     padding: 8rem 1rem;
     position: relative;
@@ -104,7 +105,7 @@ header a:hover {
 .services {
     padding: 5rem 1rem;
     background-color: #1f2937; /* Equivalente a bg-gray-800 */
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    /* background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px); */
     background-size: 20px 20px;
     position: relative;
 }
@@ -142,11 +143,15 @@ header a:hover {
     }
 }
 .services .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #111827; /* Equivalente a bg-gray-900 */
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 .services .card:hover {
     transform: scale(1.05);
@@ -192,6 +197,7 @@ header a:hover {
 .services .cta {
     text-align: center;
     margin-top: 3rem;
+    max-height: 64px;
 }
 .services .cta a {
     background-color: #ec4899;
@@ -268,7 +274,6 @@ header a:hover {
 .about {
     padding: 5rem 1rem;
     background-color: #111827; /* Equivalente a bg-gray-900 */
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
     position: relative;
     text-align: center;
@@ -326,7 +331,6 @@ header a:hover {
 .mvv {
     padding: 5rem 1rem;
     background-color: #1e3a8a; /* Equivalente a bg-blue-900 */
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
 }
 .mvv .container {
