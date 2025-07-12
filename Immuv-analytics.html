@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Immuv Analytics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Assets/Imagens/Color_logo.png">
+  
+
+  <style>
+    :root {
+      --primary-color: #005ba9; /*Azul Immuv*/
+      --secondary-color: #fd4bc7; /* Rosa Immuv */
+      --tertiary-color:white;
+      --text-color: #333;
+      --card-bg: #fff;
+      --border-color: #e0e0e0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, #1e3a8a 0%, #000000 100%);
+      color: var(--text-color);
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
+    }
+
+    header img {
+      max-width: 180px;
+      filter: brightness(0) invert(1); /* Transforma o logo em branco */
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: var(--tertiary-color);
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 5px;
+      display: inline-block;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: #f0f8ff; /* Azul claro */
+      color: var(--primary-color);
+    }
+
+    select, input, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    select:focus, input:focus, textarea:focus {
+      outline: 2px solid var(--secondary-color);
+      border-color: transparent;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #005ba9;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-top: 30px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .empresa {
+      margin-bottom: 30px;
+      background-color: #ffffff;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--secondary-color);
+    }
+
+    .empresa label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+    }
+
+    .empresa input {
+      border: 1px solid var(--primary-color);
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+
+      td {
+        border: none;
+        margin-bottom: 10px;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        color: var(--primary-color);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Assets/Imagens/White_logo.png" alt="Logo Immuv">
+  </header>
+
+  <main id="conteudoChecklist">
+    <h1>Immuv Analytics </h1>
+
+    <form id="checklistForm">
+      <div class="empresa">
+        <label for="nomeEmpresa">Nome da Empresa</label>
+        <input type="text" id="nomeEmpresa" name="nomeEmpresa" placeholder="Digite o nome da empresa" required>
+      </div>
+
+      <section>
+        <h2>Instagram</h2>
+        <table>
+          <tr><th>Item</th><th>Avaliação</th><th>Observações</th></tr>
+          <tr><td data-label="Item">Foto de perfil profissional</td><td data-label="Avaliação"><select name="perfil"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_perfil"></td></tr>
+          <tr><td data-label="Item">Nome de usuário claro</td><td data-label="Avaliação"><select name="usuario"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_usuario"></td></tr>
+          <tr><td data-label="Item">Bio com CTA</td><td data-label="Avaliação"><select name="bio"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_bio"></td></tr>
+          <tr><td data-label="Item">Link ativo</td><td data-label="Avaliação"><select name="link"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_link"></td></tr>
+          <tr><td data-label="Item">Destaques organizados</td><td data-label="Avaliação"><select name="destaques"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_destaques"></td></tr>
+          <tr><td data-label="Item">Frequência de postagens</td><td data-label="Avaliação"><select name="frequencia"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_frequencia"></td></tr>
+          <tr><td data-label="Item">Diversidade de conteúdo</td><td data-label="Avaliação"><select name="diversidade"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_diversidade"></td></tr>
+          <tr><td data-label="Item">Qualidade visual</td><td data-label="Avaliação"><select name="qualidade"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_qualidade"></td></tr>
+          <tr><td data-label="Item">Envolvimento do público</td><td data-label="Avaliação"><select name="envolvimento"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_env"></td></tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Site</h2>
+        <table>
+          <tr><td data-label="Item">Site carrega no celular</td><td data-label="Avaliação"><select name="site_celular"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_site_celular"></td></tr>
+          <tr><td data-label="Item">Botão de contato visível</td><td data-label="Avaliação"><select name="site_botao"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_site_botao"></td></tr>
+          <tr><td data-label="Item">Layout profissional</td><td data-label="Avaliação"><select name="site_layout"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_site_layout"></td></tr>
+          <tr><td data-label="Item">Serviços explicados</td><td data-label="Avaliação"><select name="site_servicos"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_site_servicos"></td></tr>
+          <tr><td data-label="Item">Formulário funcionando</td><td data-label="Avaliação"><select name="site_formulario"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_site_formulario"></td></tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>WhatsApp</h2>
+        <table>
+          <tr><td data-label="Item">Link direto funciona</td><td data-label="Avaliação"><select name="zap_link"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_zap_link"></td></tr>
+          <tr><td data-label="Item">Mensagem automática</td><td data-label="Avaliação"><select name="zap_auto"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_zap_auto"></td></tr>
+          <tr><td data-label="Item">Catálogo ativado</td><td data-label="Avaliação"><select name="zap_catalogo"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_zap_catalogo"></td></tr>
+          <tr><td data-label="Item">Resposta rápida</td><td data-label="Avaliação"><select name="zap_rapida"><option>Sim</option><option>Não</option></select></td><td data-label="Observações"><input name="obs_zap_rapida"></td></tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Oportunidades Identificadas</h2>
+        <textarea name="oportunidades" rows="4" placeholder="Escreva aqui as oportunidades que você identificou..."></textarea>
+
+        <h2>Sugestões Estratégicas</h2>
+        <textarea name="sugestoes" rows="4" placeholder="Escreva aqui suas sugestões estratégicas..."></textarea>
+      </section>
+
+      <button type="button" onclick="">Gerar PDF</button>
+    </form>
+  </main>
+
+</body>
+</html>
